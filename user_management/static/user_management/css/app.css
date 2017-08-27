@@ -1,0 +1,78 @@
+body {
+    overflow: hidden;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.centered {
+    text-align: center;
+}
+
+.right {
+    float: right;
+}
+
+#search-status-container {
+    margin: 0;
+    width: calc(25% - 0.935rem);
+}
+
+select {
+    height: 2.6375rem;
+}
+
+.pagination {
+    text-transform:capitalize;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.current-page {
+    /* prevents expanding when number of digits grows */
+    min-width: 40px;
+    text-align: center;
+}
+
+.page {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#my-status-select {
+    margin-bottom: 0px;
+}
+
+.pagination li {
+    display: inline-block !important;
+}
+
+.profile-page {
+    padding-top: 10px;
+}
+
+.login-page {
+    padding-top: 35vh;
+}
+
+.username {
+    display: inline-block;
+}
+
+.login-input-group {
+    margin-bottom: 0px;
+}
+
+#login-failed-msg {
+    color: red;
+    text-align: center;
+    display: none;
+}

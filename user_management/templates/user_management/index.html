@@ -1,0 +1,23 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWorkStatus</title>
+    <link rel="stylesheet" href="{% static 'user_management/css/foundation.css' %}">
+    <link rel="stylesheet" href="{% static 'user_management/css/app.css' %}?t=5">
+  </head>
+  <body>
+
+    {% include 'user_management/login.html' %}
+    {% include 'user_management/profile.html' %}
+
+    <script src="{% static 'user_management/js/vendor/jquery.js' %}"></script>
+    <script src="{% static 'user_management/js/vendor/what-input.js' %}"></script>
+    <script src="{% static 'user_management/js/vendor/foundation.js' %}"></script>
+    <script src="{% static 'user_management/js/app.js' %}"></script>
+    <script src="{% static 'user_management/js/api.js' %}"></script>
+  </body>
+</html>

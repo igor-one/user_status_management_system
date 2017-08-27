@@ -1,0 +1,62 @@
+<div class="page profile-page">
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+
+      <div class="small-8 cell">
+          <h1>Hello <div class="username">User</div>!</h1>
+      </div>
+      <div class="small-4 cell">
+        <a href="#" onclick="logout()" class="button right">Logout</a>
+      </div>
+
+      <div class="small-12 cell">
+        <div class="input-group">
+          <span class="input-group-label">Your Status</span>
+          <select id="my-status-select">
+          {% for value, display in statuses %}
+            <option value="{{ value }}"
+                    {% if value == request.user.status %} selected{% endif %}>{{ display }}</option>
+          {% endfor %}
+          </select>
+          </div>
+      </div>
+
+      <div class="small-9 cell">
+        <div class="input-group">
+            <span class="input-group-label">User Name</span>
+          <input id="search-input" class="input-group-field" placeholder="Enter name" type="text">
+          <div class="input-group-button">
+            <input type="submit" onclick="search_profiles()" class="button" value="Search">
+          </div>
+        </div>
+      </div>
+
+      <div class="small-3 cell" id="search-status-container">
+        <select id="search-status-select">
+        {% for value, display in statuses %}
+            <option value="{{ value }}">{{ display }}</option>
+        {% endfor %}
+        </select>
+      </div>
+
+      <div class="small-12 cell">
+        <table>
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th width="200">Status</th>
+            </tr>
+          </thead>
+          <tbody id="profiles-tbody">
+            <tr>
+              <td>Loading...</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="pagination" id="profile-pagination"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
